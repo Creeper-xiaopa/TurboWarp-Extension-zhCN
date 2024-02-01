@@ -330,39 +330,6 @@
       </div>
     </div>
 
-    <script>
-      document.addEventListener("click", function (e) {
-        var toCopy = e.target.getAttribute("data-copy");
-        if (toCopy) {
-          if (navigator.clipboard && navigator.clipboard.writeText) {
-            navigator.clipboard.writeText(toCopy);
-          } else {
-            var input = document.createElement("input");
-            input.value = toCopy;
-            input.style.top = "0";
-            input.style.left = "0";
-            input.style.position = "fixed";
-            document.body.appendChild(input);
-            input.focus();
-            input.select();
-            try {
-              document.execCommand("copy");
-            } catch (e) {
-              console.error(e);
-            }
-            document.body.removeChild(input);
-            e.target.focus();
-          }
-        }
-
-        if (e.target.className.includes("sample-list-button")) {
-          var extension = e.target.closest(".extension");
-          extension.dataset.samplesOpen =
-            extension.dataset.samplesOpen !== "true";
-        }
-      });
-    </script>
-
     <div class="section extensions-outer">
       <div class="extensions">
         <div class="extension">
@@ -374,17 +341,11 @@
             />
 
             <div class="extension-buttons">
-              <button
-                class="copy"
-                data-copy="https://extensions.turbowarp.org/lab/text.js"
-              >
-                Copy URL
-              </button>
               <a
-                class="open"
-                href="https://turbowarp.org/editor?extension=https://extensions.turbowarp.org/lab/text.js"
-                >Open Extension</a
-              >
+                class="copy"
+                href="https://extensions.turbowarp.org/lab/text.js" target="_blank" style="color:white ;"
+              >下载扩展
+              </a>
             </div>
           </div>
 
@@ -396,7 +357,7 @@
         </div>
 
 
-        
+
       </div>
     </div>
 
