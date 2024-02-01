@@ -1,2 +1,3 @@
 # TurboWarp-Extension-zhCN
-Turbowarp 插件第三方简体中文汉化
+Turbowarp 扩展第三方简体中文汉化
+[tw.xuyiyang.vip](https://tw.xuyiyang.vip)
